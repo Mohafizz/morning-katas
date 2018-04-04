@@ -17,7 +17,11 @@ describe("sortDigitsInDescendingOrder", () => {
     expect(sortDigitsInDescendingOrder("214")).toEqual(["4", "2", "1"]);
   });
 
-  it("should return a sorted string", () => {
+  it.skip("should return a sorted string", () => {
     expect(sortDigitsInDescendingOrder("12475")).toEqual("75421");
+  });
+
+  it("should return integers", () => {
+    expect(sortDigitsInDescendingOrder(123)).toEqual(321);
   });
 });

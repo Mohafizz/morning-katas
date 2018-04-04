@@ -14,7 +14,7 @@ const sortDigitsInDescendingOrder = digits => {
     })
     .join("");
 
-  return sortedDigits;
+  return parseInt(sortedDigits);
 };
 
 console.log(sortDigitsInDescendingOrder(123));
