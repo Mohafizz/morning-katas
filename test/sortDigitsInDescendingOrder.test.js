@@ -4,7 +4,7 @@
 // sortDigitsInDescendingOrder(1254859723) --> 9875543221
 let sortDigitsInDescendingOrder = require("../src/sortDigitsInDescendingOrder");
 
-describe("sortDigitsInDescendingOrder", () => {
+describe.skip("sortDigitsInDescendingOrder", () => {
   it("should not be an empty string", () => {
     expect(sortDigitsInDescendingOrder("")).toEqual(false);
   });
