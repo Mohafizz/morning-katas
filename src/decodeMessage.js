@@ -5,18 +5,17 @@ Spaces are not encoded/decoded. For example: "gsrh nvhhztv" will be decoded as "
 */
 
 const decodeMessage = string => {
+  let arr = [...string];
   let newArr = [];
-  let codes = [...string.toLowerCase()].map(element => {
-    if (element.charCodeAt() < 97 || element.charCodeAt() > 122) {
-      return newArr.push(32);
-    }
-    newArr.push(122 - (element.charCodeAt() - 97));
+  let codes = arr.map(element => {
+    if (element < 97 || element > 122) {
+      return element;
+    } else newArr.push(122 - (element.charCodeAt() - 97));
   });
 
-  let finalOutput = newArr
-    .map(element => String.fromCharCode(element))
-    .join("");
+  let finalOutput = newArr.map(element => String.fromCharCode(element));
   return finalOutput;
+  // return String.fromCharCode(newArr[0]);
 };
 
 module.exports = decodeMessage;
